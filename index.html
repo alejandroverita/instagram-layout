@@ -12,10 +12,19 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .post-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 293px));
+            justify-content: center;
+            grid-gap: 28px;
+        }
+
+
         .post {
             cursor: pointer; /* pa que pase la manito cada que pase por ahi */
             position: relative; /* es padre de .post overlay que es absoluto */
-            width: 200px;
+            /* width: 200px; */
             display: block;
         }
 
@@ -53,6 +62,13 @@
             display: inline-block;/* pa que este uno al lado del otro */
         }
 
+        @media screen and (max-width: 768px) /* una tablet */
+        {
+            .post-list {
+                grid-gap: 3px;
+            }
+            
+        }
 
     </style>
 </head>
@@ -69,6 +85,108 @@
                 </p>
             </span>
         </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu2.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu3.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <!-- SEGUNDA FILA -->
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu2.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu3.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+
+        <!-- TERCERA FILA -->
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu2.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu3.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
 
     </section>
 </body>
