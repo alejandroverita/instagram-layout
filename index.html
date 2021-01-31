@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instagram layout con Grid Css">
+    <meta name="robots" content="follow, index">
+    <title>Instagram Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .post {
+            cursor: pointer; /* pa que pase la manito cada que pase por ahi */
+            position: relative; /* es padre de .post overlay que es absoluto */
+            width: 200px;
+            display: block;
+        }
+
+        .post-image img {
+            width: 100%;
+            vertical-align: top; /* pa que salga un pequeño margen */
+
+        }
+
+        .post-overlay { /* lo que esta encima de nuesro post y podemos ver los comentarios */
+            background: rgba(0, 0, 0, 0.4); /* red, green, blue, alpha (transparencia) */
+            position: absolute; /* con respcto a su padre relativo mas cercano */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: none; /* al principio no aparecera */
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        } 
+
+        .post:hover .post-overlay{ /* apareera el .post-overlay cuando le haga hover */
+            display: flex;
+
+        }
+
+        .post-likes,
+        .post-comments {
+            width: 80px;
+            margin: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;/* pa que este uno al lado del otro */
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="post-list">
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./instagram/compu.jpg" alt="compu">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+
+    </section>
+</body>
+</html>
