@@ -6,73 +6,88 @@
     <meta name="description" content="Instagram layout con Grid Css">
     <meta name="robots" content="follow, index">
     <title>Instagram Layout</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .post-list {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(100px, 293px));
-            justify-content: center;
-            grid-gap: 28px;
-        }
-
-
-        .post {
-            cursor: pointer; /* pa que pase la manito cada que pase por ahi */
-            position: relative; /* es padre de .post overlay que es absoluto */
-            /* width: 200px; */
-            display: block;
-        }
-
-        .post-image img {
-            width: 100%;
-            vertical-align: top; /* pa que salga un pequeño margen */
-
-        }
-
-        .post-overlay { /* lo que esta encima de nuesro post y podemos ver los comentarios */
-            background: rgba(0, 0, 0, 0.4); /* red, green, blue, alpha (transparencia) */
-            position: absolute; /* con respcto a su padre relativo mas cercano */
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            display: none; /* al principio no aparecera */
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        } 
-
-        .post:hover .post-overlay{ /* apareera el .post-overlay cuando le haga hover */
-            display: flex;
-
-        }
-
-        .post-likes,
-        .post-comments {
-            width: 80px;
-            margin: 5px;
-            font-weight: bold;
-            text-align: center;
-            display: inline-block;/* pa que este uno al lado del otro */
-        }
-
-        @media screen and (max-width: 768px) /* una tablet */
-        {
-            .post-list {
-                grid-gap: 3px;
-            }
-            
-        }
-
-    </style>
+    <link rel="shortcut icon" href="../../../alejandroverita/images/android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="main-header">
+        <div class="header-wrapper">
+            <div class="instagram-logos">
+                <figure class="logo1"><img src="./instagram/instagram_logo.png" alt=""></figure>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="icon icon-search"><i class="fa fa-search"></i></span>
+                    <input type="search" placeholder="Buscar..." />
+                </div>
+            </div>
+            <div class="header-icons"></div>
+        </div>
+    </nav>
+
+    <header class="profile">
+        <section class="picture-container">
+            <figure class="profile-pic">
+                <img src="https://instagram.fuio4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/42607307_2045294712175823_8403548533365407744_n.jpg?_nc_ht=instagram.fuio4-1.fna.fbcdn.net&_nc_ohc=PYTqxMO9HfUAX9PakJm&tp=1&oh=e862d146cb040d18973388adf55ba5f3&oe=603F36AF" alt="Imagen de alejandro">
+            </figure>
+        </section>
+
+        <section class="profile-info">
+            <section class="title-bar">
+                <h1>alejandroverahdez</h1>
+                <span class="follow-section">
+                    <button class="following">Siguiendo</button>
+                    <button class="morearrow-section">
+                        <i class="material-icons">
+                               🔽
+                        </i>
+                    </button>
+                </span>
+                <button class="more-horiz">
+                    <i class="material-icons"> <b>...</b> </i>
+                </button>
+            </section>
+
+            <ul class="engagement-section">
+                <li class="post-qty"><b>36</b> publicaciones</li>
+                <li class="followers-qty"><b>353</b> seguidores</li>
+                <li class="following-qty"><b>783</b> seguidos</li>
+            </ul>
+
+
+            <section class="text-section">
+                <h2>Alejandro Vera Hernandez</h2>
+                <p class="profile-description">
+                    Aircraft Mechanic, 
+                    <a href="#">#emprendedor</a> y 
+                    <a href="#">#frontedDeveloper</a>. Aprendo a diario 
+                    <a href="#">#nuncaparesdeaprender</a> para un 
+                    <a href="#">#crecimientoexponencial</a>.
+                    <br><a href="https:alejandroverita.github.io" target="_blank" class="website">alejandroverita</a>
+                </p>
+                <div class="friends-following">
+                    <a href="" class="profile-link">erreequismx</a>, 
+                    <a href="" class="profile-link">erreequismx</a>, 
+                    <a href="" class="profile-link">erreequismx</a>
+                    <a href="" class="more-friends">y 4 más siguen a esta cuenta.</a>
+                </div>
+            </section>
+        </section>
+    </header>
+
+    <section class="stories-section">
+        <ul class="stories-list">
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=18" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=19" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=20" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=21" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=22" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=23" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=24" alt=""></figure><span class="story-name">Historia</span></li>
+        </ul>
+    </section>
+
+
     <section class="post-list">
         <a href="" class="post">
             <figure class="post-image">
